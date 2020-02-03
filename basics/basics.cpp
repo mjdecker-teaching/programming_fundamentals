@@ -20,5 +20,10 @@ int main() {
 
     std::cout << "Hello World!\n";
 
+    int number = 42;
+
+    std::cout << number << "\n";
+
+
     return 0;
 }
