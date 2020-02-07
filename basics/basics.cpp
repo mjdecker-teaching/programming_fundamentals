@@ -82,5 +82,21 @@ int main() {
     int foo = 1.5;
     std::cout << foo << '\n';
 
+    // show assignment
+    int years = 5;
+    std::cout << "years = " << years << '\n';
+    years = 14;
+    std::cout << "years = " << years << '\n';
+
+    int dog_years = 7 * years;
+    std::cout << years << " years is " << dog_years << " dog years\n";
+
+    // other ways to initialize
+    int x = 0, y = 1;
+    int parenthesis_init(x + y);
+
+    //std::cout << declared_after_use << '\n';
+    int declared_after_use = 0;
+
     return 0;
 }
