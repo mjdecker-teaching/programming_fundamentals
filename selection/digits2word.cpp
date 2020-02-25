@@ -33,7 +33,7 @@ int main(int argc, char * argv[]) {
         } else if(ones_digit == '6') {
             std::cout << "sixteen";
         } else if(ones_digit == '7') {
-            std::cout << "seventeem";
+            std::cout << "seventeen";
         } else if(ones_digit == '8') {
             std::cout << "eighteen";
         } else if(ones_digit == '9') {
