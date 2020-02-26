@@ -103,6 +103,7 @@ int main(int argc, char * argv[]) {
 
   // string comparison is
   // lexicographical (i.e., dictionary order)
+  // case matters (upper case come before lower case)
   std::string hello("hello");
   std::string world("world");
 
@@ -136,8 +137,9 @@ int main(int argc, char * argv[]) {
     std::cout << "Invalid input";
   else
     std::cout << "Invalid input";
-/*
+*/
 
+  // Nested input - verifying a range/valid input
   if(input > 0) {
     if(input < 100) {
       std::cout << "Valid input";
@@ -155,6 +157,7 @@ int main(int argc, char * argv[]) {
   std::cin >> num;
 
 /*
+  // else if with nested blocks
   if(num == 0) {
     std::cout << "zero";
   } else {
@@ -168,6 +171,8 @@ int main(int argc, char * argv[]) {
   }
   */
 
+  // else if with more inline/cleaner syntax
+  // i.e., else has no block unless final else
   if(num == 0) {
     std::cout << "zero";
   } else if(num > 0) {
