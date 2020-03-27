@@ -41,5 +41,7 @@ int main(int argc, char * argv[]) {
 		}
 	}
 
+	std::cout <<  "Total rainfall for all regions is: " << total_rainfall << '\n';
+ 
     return 0;
 }
