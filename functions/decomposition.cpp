@@ -37,67 +37,15 @@
 #include <string>
 
 std::string get_region_name() {
-
-	std::cout << "Region name? ";
-	std::string region_name;
-	std::cin >> region_name;
-
-	return region_name;
-}
-
-double calculate_rainfall_for_region(std::string region) {
-
-	std::cout << "Enter each days rainfall (in cm, enter negative number to quit) ";
-	double region_total = 0;;
-
-	double rainfall;
-	std::cin >> rainfall;
-	while(rainfall >= 0) {
-		region_total += rainfall;
-		std::cin >> rainfall;
-	}
-
-	std::cout << "Total rainfall for " << region_name << " is: " << region_total << "cm\n";
-
-	return regiion_total;	
-}
-
-char get_yes_no_input() {
-
-	std::cout << "Enter another region (y/n)? ";
-	std::cin >> enter_another;
-
-	while(enter_another != 'y' && enter_another != 'n') {
-		std::cout << "Invalid response, enter (y/n): ";
-		std::cin >> enter_another;
-	}	
-
-}
-
-int main(int argc, char * argv[]) {
-
-	char enter_another = 'y';
-	double total_rainfall = 0;
-	while(enter_another == 'y') {
-
-		std::string region_name = get_region_name();
-
-		double region_total = calculate_rainfall_for_region(region_name);
-
-		total_rainfall += region_total;
-
-		char enter_another = get_yes_no_input();
-
-	}
-
- 	/*
- 	char enter_another = 'y';
-	double total_rainfall = 0;
-	while(enter_another == 'y') {
-
 		std::cout << "Region name? ";
 		std::string region_name;
 		std::cin >> region_name;
+
+		return region_name;
+}
+
+
+double calculate_rainfall_for_region(const std::string & region_name) {
 
 		std::cout << "Enter each days rainfall (in cm, enter negative number to quit) ";
 		double region_total = 0;;
@@ -110,7 +58,19 @@ int main(int argc, char * argv[]) {
 		}
 
 		std::cout << "Total rainfall for " << region_name << " is: " << region_total << "cm\n";
-		total_rainfall += region_total;
+		return region_toal;
+}
+
+int main(int argc, char * argv[]) {
+
+ 	char enter_another = 'y';
+	double total_rainfall = 0;
+	while(enter_another == 'y') {
+
+		std::string region_name = get_region_name();
+
+
+		total_rainfall += calculate_rainfall_for_region(region_name);
 
 		std::cout << "Enter another region (y/n)? ";
 		std::cin >> enter_another;
@@ -120,7 +80,6 @@ int main(int argc, char * argv[]) {
 			std::cin >> enter_another;
 		}
 	}
-	*/
 
 
     return 0;
