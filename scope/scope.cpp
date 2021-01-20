@@ -22,7 +22,7 @@ int main() {
     std::cout << "speed of light: " << SPEED_OF_LIGHT << '\n';
     std::cout << "speed of light squared: " << SPEED_OF_LIGHT_SQUARED << '\n';
 
-    // local variable
+    // local variable "function mass", hides global
     double mass = 120;
     if (mass > 0) {
         double energy = mass * SPEED_OF_LIGHT_SQUARED;
